@@ -1,0 +1,11 @@
+<div class="row no-gutters">
+    <div class="col-2" *ngIf="shoppingCart && shoppingCart.getQuanity(product) > 0">
+        <button (click)="removeFromCart()" class="btn btn-secondary btn-block">-</button>
+    </div>
+    <div class="col text-center">
+        {{ shoppingCart ? shoppingCart.getQuanity(product) : 0}} in cart
+    </div>
+    <div class="col-2">
+        <button (click)="addToCart()" class="btn btn-secondary btn-block">+</button>
+    </div>
+</div>
